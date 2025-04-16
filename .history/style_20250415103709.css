@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+}
+body {
+    background-image: url('./imagens/pexels-francesco-ungaro-998641.jpg'); /* Substitua pelo caminho correto da imagem */
+    background-size: cover; /* Faz a imagem preencher toda a tela */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Impede a repetição da imagem */
+    height: 100vh; /* Define a altura do corpo como 100% da altura da tela */
+    width: 100vw; /* Define a largura do corpo como 100% da largura da tela */
+    margin: 0;
+    padding: 0;
+}
+
+
+.container-esquerda{
+    color: azure;
+}
+
+.container-esquerda p{
+    color: beige;
+}
