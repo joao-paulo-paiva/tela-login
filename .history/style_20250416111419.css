@@ -47,7 +47,7 @@ h1::after {
 .container {
     display: flex;
     height: 70%;
-    width: 80%;
+    width: 90%;
     max-width: 900px;
     background: white;
     border-radius: 10px;
@@ -110,21 +110,6 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
-.termos {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.termos label {
-    font-size: 14px;
-    color: #555;
-}
-
-.termos input {
-    accent-color: #007bff; /* Cor azul quando marcado */
 }
 
 

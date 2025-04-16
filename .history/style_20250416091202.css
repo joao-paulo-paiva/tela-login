@@ -111,36 +111,24 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
-.termos {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.termos label {
-    font-size: 14px;
-    color: #555;
-}
-
-.termos input {
-    accent-color: #007bff; /* Cor azul quando marcado */
-}
-
-
-.esquerda h1, .esquerda p {
-    animation: moverTexto 1.5s ease-out forwards;
-}
 
 @keyframes moverTexto {
     0% {
         transform: translateX(-100%);
         opacity: 0;
     }
-    100% {
+    50% {
         transform: translateX(0);
         opacity: 1;
     }
+    100% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
 }
 
+.esquerda h1, .esquerda p {
+    animation: moverTexto 3s infinite;
+}
+animation: moverTexto 3s ease-in-out forwards;
 

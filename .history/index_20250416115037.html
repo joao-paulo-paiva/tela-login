@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Prompt", sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url(./imagens/pexels-francesco-ungaro-998641.jpg);
+            background-size: cover;
+            background-position: center; 
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: -1;
+        }
+
+        .container {
+            display: flex;
+            height: 70%;
+            width: 80%;
+            max-width: 900px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .esquerda, .direita {
+            width: 50%;
+            padding: 40px;
+        }
+
+        .esquerda {
+            background-color: #007bff;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .direita {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            position: relative;
+            color: orange;
+            animation: moverTexto 1.5s ease-out forwards;
+        }
+
+        h1::before {
+            content: "🔥";
+            position: absolute;
+            left: -30px;
+        }
+
+        h1::after {
+            content: "🔥";
+            position: absolute;
+            right: -30px;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        .teste-gratis {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 55%;
+            padding: 10px;
+            background-color: #163353;
+            text-decoration: none;
+            color: beige;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .termos {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .termos label {
+            font-size: 15px;
+            color: #444;
+        }
+
+        .termos input {
+            accent-color: #007bff;
+        }
+
+        @keyframes moverTexto {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="esquerda">
+            <h1>Bem-vindo</h1>
+            <p>Faça login para acessar sua conta.</p>
+        </div>
+        <div class="direita">
+            <a href="#" class="teste-gratis"><p>Teste 7 dias grátis</p></a>
+            <form action="#" method="POST">
+                <input type="text" placeholder="Usuário" required>
+                <input type="email" placeholder="E-mail" required>
+                <input type="password" placeholder="Senha" required>
+                <button type="submit">Entrar</button>
+                <div class="termos">
+                    <input type="checkbox" id="termos" required>
+                    <label for="termos">Li e concordo com os termos</label>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

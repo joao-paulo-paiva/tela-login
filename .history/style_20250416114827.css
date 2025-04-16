@@ -14,7 +14,9 @@ body {
     background-size: cover;
     background-position: center; 
     background-repeat: no-repeat;
+    position: relative;
 }
+
 body::before {
     content: "";
     position: absolute;
@@ -22,27 +24,9 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Ajuste o último valor para mudar a opacidade */
+    background-color: rgba(0, 0, 0, 0.4);
     z-index: -1;
 }
-
-h1 {
-    position: relative;
-    color: orange;
-}
-
-h1::before {
-    content: "🔥";
-    position: absolute;
-    left: -30px;
-}
-
-h1::after {
-    content: "🔥";
-    position: absolute;
-    right: -30px;
-}
-
 
 .container {
     display: flex;
@@ -52,6 +36,7 @@ h1::after {
     background: white;
     border-radius: 10px;
     overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .esquerda, .direita {
@@ -75,6 +60,24 @@ h1::after {
     align-items: center;
 }
 
+h1 {
+    position: relative;
+    color: orange;
+    animation: moverTexto 1.5s ease-out forwards;
+}
+
+h1::before {
+    content: "🔥";
+    position: absolute;
+    left: -30px;
+}
+
+h1::after {
+    content: "🔥";
+    position: absolute;
+    right: -30px;
+}
+
 input {
     display: block;
     width: 100%;
@@ -83,6 +86,7 @@ input {
     border: 1px solid #ddd;
     border-radius: 5px;
 }
+
 input:focus {
     outline: none;
     border-color: #007bff;
@@ -91,15 +95,15 @@ input:focus {
 
 .teste-gratis {
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
+    justify-content: center;
+    align-items: center;
     width: 55%;
     padding: 10px;
     background-color: #163353;
     text-decoration: none;
     color: beige;
     border-radius: 5px;
-    text-align: center; /* Garante que o texto esteja centralizado dentro do bloco */
+    text-align: center;
 }
 
 button {
@@ -110,26 +114,27 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
 }
+
+button:hover {
+    background-color: #0056b3;
+}
+
 .termos {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .termos label {
-    font-size: 14px;
-    color: #555;
+    font-size: 15px;
+    color: #444;
 }
 
 .termos input {
-    accent-color: #007bff; /* Cor azul quando marcado */
-}
-
-
-.esquerda h1, .esquerda p {
-    animation: moverTexto 1.5s ease-out forwards;
+    accent-color: #007bff;
 }
 
 @keyframes moverTexto {
@@ -142,5 +147,3 @@ button {
         opacity: 1;
     }
 }
-
-

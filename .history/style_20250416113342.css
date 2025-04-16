@@ -113,10 +113,10 @@ button {
 }
 .termos {
     display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 10px;
+    align-items: center; /* Garante alinhamento vertical */
+    gap: 8px; /* Espaço entre checkbox e texto */
 }
+
 
 .termos label {
     font-size: 14px;

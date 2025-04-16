@@ -37,7 +37,7 @@ h1::before {
     left: -30px;
 }
 
-h1::after {
+h1::before {
     content: "🔥";
     position: absolute;
     right: -30px;
@@ -111,26 +111,6 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
-.termos {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.termos label {
-    font-size: 14px;
-    color: #555;
-}
-
-.termos input {
-    accent-color: #007bff; /* Cor azul quando marcado */
-}
-
-
-.esquerda h1, .esquerda p {
-    animation: moverTexto 1.5s ease-out forwards;
-}
 
 @keyframes moverTexto {
     0% {
@@ -142,5 +122,11 @@ button {
         opacity: 1;
     }
 }
+
+.esquerda h1, .esquerda p {
+    animation: moverTexto 1.5s ease-out forwards;
+}
+
+
 
 
